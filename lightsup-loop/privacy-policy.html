@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Lightsup Loop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0A0A0B;
+            --card-bg: #141417;
+            --accent-glow: #00F2FF;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0AA;
+            --border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow Background */
+        .ambient-glow {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 242, 255, 0.05) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(60px);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1A1A1E 0%, #0A0A0B 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            background: linear-gradient(to bottom, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle vertical line matching the app theme */
+        .content-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--accent-glow), transparent);
+            opacity: 0.3;
+        }
+
+        p {
+            margin-bottom: 24px;
+            color: var(--text-secondary);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin: 40px 0 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-glow);
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        li {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-glow);
+            font-weight: bold;
+            opacity: 0.7;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-bottom: 80px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer a {
+            color: var(--accent-glow);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 40px auto;
+            }
+
+            .content-card {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+        <header>
+            <div class="app-icon">
+                <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_27_2)">
+                        <rect width="512" height="512" fill="black" />
+                        <g opacity="0.75">
+                            <path
+                                d="M264.42 425.374C264.42 425.914 263.982 426.352 263.442 426.352C262.902 426.352 262.465 425.914 262.465 425.374C262.465 424.834 262.902 424.396 263.442 424.396C263.982 424.396 264.42 424.834 264.42 425.374Z"
+                                fill="#D9D9D9" />
+                            <path
+                                d="M136.42 264.735C136.42 265.276 135.982 265.713 135.442 265.713C134.902 265.713 134.465 265.276 134.465 264.735C134.465 264.195 134.902 263.758 135.442 263.758C135.982 263.758 136.42 264.195 136.42 264.735Z"
+                                fill="#D9D9D9" />
+                            <circle cx="93.6627" cy="167.022" r="0.977812" fill="#D9D9D9" />
+                            <circle cx="17.9778" cy="129.978" r="0.977812" fill="#D9D9D9" />
+                            <circle cx="411.978" cy="11.9778" r="0.977812" fill="#D9D9D9" />
+                            <circle cx="489.978" cy="355.978" r="0.977812" fill="#D9D9D9" />
+                            <circle cx="328.978" cy="496.978" r="0.977812" fill="#D9D9D9" />
+                            <circle cx="126.978" cy="373.978" r="0.977812" fill="#D9D9D9" />
+                            <circle cx="343.982" cy="84.8857" r="0.977812" fill="#D9D9D9" />
+                            <circle cx="399.718" cy="209.068" r="1.95562" fill="#D9D9D9" />
+                            <circle cx="96.5963" cy="455.476" r="1.95562" fill="#D9D9D9" />
+                            <circle cx="436.956" cy="440.956" r="1.95562" fill="#D9D9D9" />
+                            <circle cx="504.956" cy="122.956" r="1.95562" fill="#D9D9D9" />
+                            <circle cx="15.9556" cy="24.9556" r="1.95562" fill="#D9D9D9" />
+                            <circle cx="1.95562" cy="352.956" r="1.95562" fill="#D9D9D9" />
+                            <circle cx="322.602" cy="327.774" r="1.95562" fill="#D9D9D9" />
+                            <circle cx="176.777" cy="183.645" r="1.95562" fill="#D9D9D9" />
+                            <circle cx="260.868" cy="54.5735" r="1.95562" fill="#D9D9D9" />
+                        </g>
+                        <path
+                            d="M256 200.835C275.141 200.835 290.478 216.037 290.478 234.93C290.478 242.317 288.001 249.408 283.976 254.97L283.749 255.196L283.627 255.316L283.532 255.458C282.87 256.441 282.296 257.285 281.445 258.127L281.386 258.185L281.333 258.249C278.993 261.061 275.549 265.546 272.682 270.635C270.133 275.159 267.945 280.328 267.518 285.306H244.483C244.055 280.328 241.867 275.159 239.318 270.635C236.467 265.574 233.046 261.111 230.706 258.297C230.329 257.751 229.885 257.223 229.509 256.776C229.084 256.272 228.736 255.855 228.468 255.458L228.372 255.316L228.251 255.196L228.024 254.97C223.998 249.408 221.522 242.317 221.522 234.93C221.522 216.037 236.859 200.835 256 200.835Z"
+                            fill="white" stroke="white" stroke-width="3.44781" />
+                        <line x1="243.071" y1="292.202" x2="268.929" y2="292.202" stroke="white"
+                            stroke-width="5.17172" />
+                        <line x1="243.071" y1="299.96" x2="268.929" y2="299.96" stroke="white" stroke-width="5.17172" />
+                        <line x1="243.071" y1="307.717" x2="268.929" y2="307.717" stroke="white"
+                            stroke-width="5.17172" />
+                        <line x1="253.414" y1="519.726" x2="256" y2="310.271" stroke="white" stroke-width="5.17172" />
+                        <g opacity="0.1" filter="url(#filter0_f_27_2)">
+                            <circle cx="256" cy="256" r="183" fill="white" />
+                        </g>
+                        <g filter="url(#filter1_f_27_2)">
+                            <circle cx="256" cy="256" r="77.5208" fill="white" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_f_27_2" x="-50.2706" y="-50.2707" width="612.541" height="612.541"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="61.6354" result="effect1_foregroundBlur_27_2" />
+                            </filter>
+                            <filter id="filter1_f_27_2" x="55.2088" y="55.2083" width="401.583" height="401.583"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="61.6354" result="effect1_foregroundBlur_27_2" />
+                            </filter>
+                            <clipPath id="clip0_27_2">
+                                <rect width="512" height="512" fill="white" />
+                            </clipPath>
+                        </defs>
+                </svg>
+            </div>
+            <h1>Lightsup Loop</h1>
+            <p class="last-updated">Last Updated: February 8, 2026</p>
+        </header>
+
+        <main class="content-card">
+            <p>This Privacy Policy describes how "Lightsup Loop" ("we", "our", or "the App") collects, uses, and shares
+                your information when you use our mobile application.</p>
+
+            <h2>1. Information We Collect</h2>
+
+            <h3>A. Information Provided by Google Play Games Services</h3>
+            <p>If you choose to sign in with Google Play Games, we may access your:</p>
+            <ul>
+                <li>Public Profile Name</li>
+                <li>Player ID</li>
+                <li>Game Progress (via Cloud Save/Snapshots)</li>
+                <li>Achievement and Leaderboard data</li>
+            </ul>
+
+            <h3>B. Analytical Data</h3>
+            <p>We use <strong>Firebase Analytics</strong> to understand how users interact with the App. This includes
+                data such as:</p>
+            <ul>
+                <li>Number of levels completed</li>
+                <li>Time spent in the App</li>
+                <li>In-app events (e.g., theme changes, hints used)</li>
+                <li>Device information (model, OS version)</li>
+            </ul>
+
+            <h3>C. Crash Data</h3>
+            <p>We use <strong>Firebase Crashlytics</strong> to monitor and fix App stability issues. This collects
+                technical details about app crashes.</p>
+
+            <h3>D. Advertising Data</h3>
+            <p>We use <strong>Google AdMob</strong> to display advertisements. AdMob may collect and use data for
+                personalized advertising, including:</p>
+            <ul>
+                <li>Advertising ID (AAID)</li>
+                <li>Interaction with ads</li>
+            </ul>
+
+            <h2>2. How We Use Information</h2>
+            <p>We use the collected information for:</p>
+            <ul>
+                <li>Providing and improving the game experience.</li>
+                <li>Synchronizing game progress across devices.</li>
+                <li>Managing achievements and leaderboards.</li>
+                <li>Analyzing app performance and fixing bugs.</li>
+                <li>Delivering relevant advertisements.</li>
+            </ul>
+
+            <h2>3. Data Sharing</h2>
+            <p>We do not sell your personal data. We share information with third-party service providers
+                (Google/Firebase) only as necessary to provide the services described above.</p>
+
+            <h2>4. In-App Purchases</h2>
+            <p>All financial transactions for "Remove Ads" are handled securely by the <strong>Google Play Billing
+                    System</strong>. We do not collect or store your credit card information.</p>
+
+            <h2>5. Your Choices</h2>
+            <ul>
+                <li><strong>Play Games:</strong> You can choose not to sign in to Play Games.</li>
+                <li><strong>Ads:</strong> You can disable personalized ads in your Android device settings or purchase
+                    the "Remove Ads" feature to stop seeing advertisements entirely.</li>
+            </ul>
+
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at: <a
+                    href="mailto:raju.mia4396@gmail.com"
+                    style="color: var(--accent-glow); text-decoration: none;">raju.mia4396@gmail.com</a></p>
+        </main>
+
+        <div class="footer">
+            &copy; 2026 Lightsup Loop. All rights reserved.
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Hub | Vibe Coding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0A0A0B;
+            --card-bg: #141417;
+            --accent-glow: #00F2FF;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0AA;
+            --border-color: rgba(255, 255, 255, 0.05);
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Ambient Glow Background */
+        .ambient-glow {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 242, 255, 0.03) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .studio-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-glow);
+            margin-bottom: 16px;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to bottom, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* App Grid */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 32px;
+            padding: 32px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .app-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 242, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 242, 255, 0.1);
+        }
+
+        .app-icon-wrapper {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            border-radius: 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform var(--transition-speed);
+        }
+
+        .app-card:hover .app-icon-wrapper {
+            transform: scale(1.05);
+        }
+
+        .app-icon-wrapper svg {
+            width: 70%;
+            height: 70%;
+        }
+
+        .app-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .app-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            flex: 1;
+        }
+
+        .btn-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-glow);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            padding: 10px 24px;
+            border-radius: 12px;
+            transition: background var(--transition-speed);
+        }
+
+        .app-card:hover .btn-link {
+            background: rgba(0, 242, 255, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 24px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 80px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+        <header>
+            <div class="studio-logo">Vibe Coding</div>
+            <h1>App Portfolio</h1>
+            <p class="subtitle">Premium logic puzzles and minimalist experiences designed for relaxation and focus.</p>
+        </header>
+
+        <section class="app-grid">
+            <!-- Lightsup Loop Card -->
+            <a href="lightsup-loop/privacy-policy.html" class="app-card">
+                <div class="app-icon-wrapper">
+                    <!-- Embedded SVG Icon -->
+                    <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M256 200.835C275.141 200.835 290.478 216.037 290.478 234.93C290.478 242.317 288.001 249.408 283.976 254.97C278.993 261.061 275.549 265.546 272.682 270.635H244.483C241.867 275.159 239.318 270.635 230.706 258.297C223.998 249.408 221.522 242.317 221.522 234.93C221.522 216.037 236.859 200.835 256 200.835Z"
+                            fill="#00F2FF" />
+                        <circle cx="256" cy="256" r="183" stroke="#00F2FF" stroke-opacity="0.2" stroke-width="20" />
+                    </svg>
+                </div>
+                <h2 class="app-name">Lightsup Loop</h2>
+                <p class="app-desc">Relax with zen logic puzzles. Connect the circuit and light up the loop offline.</p>
+                <span class="btn-link">View Documentation</span>
+            </a>
+
+            <!-- Placeholder for Future App -->
+            <div class="app-card" style="opacity: 0.4; cursor: default; border-style: dashed;">
+                <div class="app-icon-wrapper" style="background: transparent; border-style: dashed;">
+                    <span style="font-size: 2rem; color: var(--text-secondary);">+</span>
+                </div>
+                <h2 class="app-name">New Project</h2>
+                <p class="app-desc">Something minimalist and relaxing is under development. Coming soon.</p>
+                <span class="btn-link" style="border-style: dashed;">Incoming</span>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 Vibe Coding. All rights reserved.
+    </footer>
+</body>
+
+</html>
